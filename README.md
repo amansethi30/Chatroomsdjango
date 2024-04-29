@@ -1,5 +1,14 @@
 # Project Summary: Django Chat Application
 Our project is a real-time chat application built using the Django web framework. It allows users to create accounts, log in, and participate in chat rooms where they can send and receive messages in real-time.
+
+## Working Video
+
+<video width="320" height="240" controls>
+  <source src="Chatroom working.mp4" type="video/mp4">
+</video>
+Project screen recorded video - 
+<a href="https://screenrec.com/share/SuWgfNE05G">Click Here</a>
+
 ## Key Features:
 1.  User Authentication: Users can sign up for an account, log in, and log out securely.
 2.	Chat Rooms: Admin users can create different chat rooms for users to join and chat in.
@@ -13,11 +22,4 @@ Our project is a real-time chat application built using the Django web framework
 The application can be deployed to any cloud provider, allowing users to access it from anywhere with an internet connection.
 Future Enhancements:
 Possible future enhancements include adding features like file sharing, message reactions, or notifications to further improve the chat experience.
-
-
-## Useful Links- 
-
-Project screen recorded video - 
-<a href="https://screenrec.com/share/SuWgfNE05G">Click Here</a>
-
 
