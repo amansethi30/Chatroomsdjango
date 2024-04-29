@@ -15,9 +15,9 @@ Project screen recorded video -
 3.	Real-time Communication: Users can send messages in chat rooms, and these messages are instantly visible to other participants.
 4.	Message Management: Users can send and read messages within chat rooms, and admins have the ability to delete inappropriate messages if necessary.
 ## Technology Stack:
-•	Django Framework: Used for building the web application and handling user authentication.
-•	Django Channels: Enables WebSocket communication for real-time chat functionality.
-•	MySQL Database: Stores user accounts, chat rooms, and messages.
+•	Django Framework: Used for building the web application and handling user authentication.<br>
+•	Django Channels: Enables WebSocket communication for real-time chat functionality.<br>
+•	MySQL Database: Stores user accounts, chat rooms, and messages.<br>
 ## Deployment:
 The application can be deployed to any cloud provider, allowing users to access it from anywhere with an internet connection.
 Future Enhancements:
