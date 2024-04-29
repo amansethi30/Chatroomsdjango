@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}ChatRooms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .messages {
+            height: 400px;
+            overflow-y: auto;
+        }
+            /* Custom styles */
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f3f4f6;
+            }
+    
+            .navbar {
+                background-color: #1f2937;
+            }
+    
+            .navbar a {
+                color: #f9fafb;
+                transition: all 0.3s ease;
+            }
+    
+            .navbar a:hover {
+                color: #60a5fa;
+            }
+    
+            .main-content {
+                padding: 20px;
+            }
+    
+            .card {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-xl text-white">ChatRooms</a>
+            <div class="space-x-4">
+            {% if request.user.is_authenticated %}
+            <a href="/rooms/" class="text-white hover:text-gray-200">Rooms</a>
+            
+            <a href="#" id="logoutLink" class="px-5 py-3 rounded-xl text-white bg-teal-600 hover:bg-teal-700" role="button">Log out</a>
+            {% else %}
+            <a href="/login/" class="px-5 py-3 rounded-xl text-white bg-teal-600 hover:bg-teal-700">Log in</a>
+            <a href="/signup/" class="px-5 py-3 rounded-xl text-white bg-teal-600 hover:bg-teal-700">Sign up</a>
+            {% endif %}
+        </div>
+    </div>
+    </nav>
+    
+    
+    <form id="logoutForm" action="{% url 'logout' %}" method="post" style="display: none;">
+        {% csrf_token %}
+    </form>
+
+    {% block content %}{% endblock %}
+    {% block scripts %}{% endblock %}
+    
+    <script>
+        document.getElementById('logoutLink').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            document.getElementById('logoutForm').submit(); 
+        });
+    </script>
+</body>
+</html>
